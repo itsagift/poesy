@@ -7,7 +7,8 @@ function NewPoemForm({setPoems}) {
   const [content, setContent] = useState("");
   
 
-  async function handleSubmit(){
+  async function handleSubmit(event){
+    event.preventDefault();
     console.log(title)
     console.log(content)
     let req = await fetch('http://localhost:8004/poems', {
