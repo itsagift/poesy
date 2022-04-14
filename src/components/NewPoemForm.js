@@ -21,6 +21,9 @@ function NewPoemForm({setPoems}) {
     })
     })
     let res = await req.json()
+    setPoems(prevState => [...prevState, {title: title,
+      content: content, 
+      author: author}])
     console.log("Submitted poem")
   }
 
